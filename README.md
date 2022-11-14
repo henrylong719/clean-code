@@ -168,3 +168,11 @@ Use nouns or short phrases with nouns
 
 ![naming_classes](images/naming_classes.png)
 
+
+
+**Class name examples**
+
+![class_name_examples](images/class_name_examples.png)
+
+
+
