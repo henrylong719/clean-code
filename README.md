@@ -1,7 +1,5 @@
 # Clean Code
 
-https://www.udemy.com/course/writing-clean-code/
-
 
 
 * Readable and meaningful
@@ -176,3 +174,109 @@ Use nouns or short phrases with nouns
 
 
 
+
+
+## Comments, Code structure & Formatting
+
+
+
+### Comments
+
+Avoid Comments with only few exceptions
+
+
+
+**Bad Comments**
+
+
+
+* **Redundant Information**
+
+  Comment self-explain variable names etc.
+
+* **Dividers/Block Markers**
+
+  ```typescript
+  // *****************
+  // GLOBALS
+  // *****************
+  let sqlDriver: any;
+  let mongoDbDriver: any;
+  
+  // *****************
+  // CLASSES
+  // *****************
+  class Database{
+    ......
+  }
+  
+  ```
+
+* **Misleading Comments**
+
+  ```typescript
+  insertData(data:any){
+    this.dbEngine.insert(data); // update a user ????????
+  }
+  ```
+
+* **Commented-Out Code**
+
+
+
+
+
+**Good Comments**
+
+* Legal Informaiton
+* Explanations which can't be replaced by good naming
+* Warning
+* Todo Notes
+
+
+
+### Code Formating
+
+Code formating improves Readability & Transports Meaning
+
+
+
+**Vertical Formatting**
+
+* Space between lines
+
+* Grouping of code
+
+  
+
+![vertical_formatting](images/vertical_formatting.png)
+
+
+
+
+
+**Horizontal Formating**
+
+* Indentation
+* Space between code
+* Line width
+
+![horizontal_formating](images/horizontal_formating.png)
+
+
+
+
+
+
+
+
+
+
+
+# References 
+
+https://www.udemy.com/course/writing-clean-code/
+
+https://github.com/ryanmcdermott/clean-code-javascript
+
+https://github.com/zedr/clean-code-python
