@@ -176,7 +176,7 @@ Use nouns or short phrases with nouns
 
 
 
-## Comments, Code structure & Formatting
+## Comments & Formatting
 
 
 
@@ -265,9 +265,150 @@ Code formating improves Readability & Transports Meaning
 
 
 
+## Function & Methods
 
 
 
+**The Number Of Function / Method Parameters**
+
+
+
+Minimize the number of parameters!
+
+
+
+
+
+![function_parameters](images/function_parameters.png)
+
+
+
+
+
+Replace multiple paramters with one parameter
+
+```typescript
+
+class User {
+  constructor(name, age, email){
+    this.name = name;
+    this.age = age;
+    this.email = email;
+  }
+}
+
+// The order matters
+const user = new User('Henry', 28, 'henrylong@gmail.com');
+
+/******************** Better Approach *****************************/
+
+class User {
+  constrcutor(userData){
+    this.name = userData.name;
+    this.age = userData.age;
+    this.email = userData.email;
+  }
+}
+
+// The order doesn't matter
+const user = new User({name:'Henry', email:'henrylong719@gmail.com', age: 28});
+
+```
+
+
+
+____
+
+
+
+**Avoid output parameters**
+
+![out_put_parameters](images/out_put_parameters.png)
+
+
+
+```javascript
+function createId(user){
+  user.id = 'u1;'
+}
+
+const user = {name: 'Henry'};
+createId(user);
+
+console.log(user)
+
+---------------------------------------------------------------------------------------
+
+class User{
+  constructor(name){
+    this.name = name;
+  }
+  
+  addId(){
+    this.id = 'u1';
+  }
+}
+
+
+const costomer = new User('Henry');
+customer.addId();
+console.log(customer);
+
+
+```
+
+
+
+___
+
+
+
+**Functions Should Do One Thing**
+
+
+
+**Functions & Abstraction**
+
+![functions_abstraction](images/functions_abstraction.png)
+
+
+
+**The Rule of thumb for keeping functions short**
+
+
+
+![keep_function_short](images/keep_function_short.png)
+
+
+
+**Don't Repeat Yourself (DRY)**
+
+Don't write the same code more than once
+
+Signs of code which "is not DRY"
+
+* You find yourself copy & pasting code
+* You need to apply the same change to multiple places in your codebase
+
+
+
+**Side Effect**
+
+```javascript
+function createUser(email, password){
+  const user = new User(email, password);
+  startSession(user);
+  return user; 
+}
+```
+
+
+
+A side effect is an operation which does not just act on function inputs and change the function output but which instead changes the overall system/program state.
+
+
+
+Side effects are not automatically bad- we do need them in out programs. But unexpected side effects should be avoided.
 
 
 
