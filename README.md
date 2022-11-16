@@ -414,6 +414,31 @@ Side effects are not automatically bad- we do need them in out programs. But une
 
 
 
+## Control Structure & Errors
+
+
+
+**Keep Your Control Structure Clean**
+
+
+
+* Avoid Deep Nesting
+* Using Factory Functions & Polymorphism
+* Prefer Positive Checks (if `isEmpty` vs if `isNotEmpty` )
+* Utilize Errors
+
+
+
+**Use Guards & Fail Fast**
+
+
+
+![use_guard](images/use_guard.png)
+
+
+
+
+
 # References 
 
 https://www.udemy.com/course/writing-clean-code/
